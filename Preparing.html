@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FROFILE</title>
+    <link rel="shortcut icon" type="image/x-icon" href="숫자/computer2.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="Preparing.css">
+  </head>
+
+  <body>
+
+    <script>
+
+      function 주간야간토글 (self) {
+        let target = document.querySelector('body');
+        let as = document.querySelectorAll('a');
+
+        // 만약 this.value가 dark라면
+        if (self.value==='DARK_MODE') {
+          for (i = 0 ; i < as.length ; i += 1) {
+            as[i].style.color = '#CFD4D8';
+            as[i].style.fontWeight = 'bold';
+          }
+          target.style.backgroundColor= 'rgb(0,0,0,0.89)'; 
+          target.style.color = '#CFD4D8';
+          self.value = 'HOME_MODE'
+          // self.value를 day로 변경
+  
+        } else if(self.value==='DAY_MODE') {
+          for (i = 0 ; i < as.length ; i += 1) {
+            as[i].style.color = 'black';
+            as[i].style.fontWeight = 'bold';
+          }
+          // 아니라면
+          target.style.backgroundColor= 'white'; 
+          target.style.color = 'black';
+          self.value = 'DARK_MODE';
+          // self.value를 dark로 변경
+        } else {
+          for (i = 0 ; i < as.length ; i += 1) {
+            as[i].style.color = 'black';
+            as[i].style.fontWeight = 'bold';
+          }
+          target.style.backgroundColor= '#B3FDD6'; 
+          target.style.color = 'black';
+          self.value = 'DAY_MODE';
+        }
+      }
+    </script>
+
+
+    <div id="header">
+
+
+      <nav class="menu_box">
+        <ul class="menu">
+          <li><a href="index.html">H O M E</a></li>
+          <li><a href="FROFILE.html">A B O U T</a></li>
+          <li><a href="#">PORTFOLIO</a></li>
+        </ul>
+      </nav>
+
+      <input type="button" value="DAY_MODE" id="Dark_Mode" onclick="
+      주간야간토글(this);
+    ">
+    </div>
+
+
+    <h1>수리중..</h1>
+    <a href="index.html" alt="공사중" id="repairing" title="돌아가"></a>
+    
+
+    <div id="container">
+      <a href="1.html" class="factor"><img src="숫자/1.png" alt="1" width="100px" height="100px"></a>
+      <a href="2.html" class="factor"><img src="숫자/2_2.png" alt="1" width="100px" height="100px"></a>
+      <a href="3.html" class="factor"><img src="숫자/3_2.png" alt="1" width="100px" height="100px"></a>
+    </div>
+    
+    <footer>
+      <div>
+        <p>010-1111-1111</p>
+        <p>developerforus@gmail.com</p>
+      </div>
+    </footer>
+
+  </body>
+</html>
